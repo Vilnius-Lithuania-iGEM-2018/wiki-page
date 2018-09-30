@@ -11,6 +11,7 @@
 import os
 from os.path import isfile, join
 from shutil import copyfile, rmtree
+from subprocess import call
 from jinja2 import Template, Environment, FileSystemLoader
 
 build_path = os.getenv('BUILD_PATH', "build/")
@@ -18,8 +19,8 @@ assets_path = os.getenv('ASSETS_PATH', "files/")
 sass_assets_path = os.getenv('SASS_ASSETS_PATH', "files/css/")
 
 # This mechanism is for asset links in templates.
-# eval is safe since this file is our own.
-# I'd reccomend to commit this file, to always have a build
+# BEWARE not to expose this function where you don't mean it
+# since it uses eval. Though mostly safe since this file is our own.
 def read_file_index_or_make_local_links():
     index = {}
     try:
@@ -31,6 +32,16 @@ def read_file_index_or_make_local_links():
         print("Something is wrong with file_index.dict. Exiting")
         raise
     return index
+
+
+def build_sass():
+    sass_files = [f for f in os.listdir(sass_assets_path) if isfile(join(sass_assets_path, f))]
+    for i, sass_file in enumerate(sass_files):
+        call([
+            'sass', 
+            sass_assets_path + sass_file, 
+            build_path + assets_path + sass_file.rpartition('.')[0] + ".css"
+        ])
 
 
 def copy_files():
@@ -74,5 +85,6 @@ except OSError:
     rmtree(build_path)
     os.mkdir(build_path)
 
-copy_files() # Modifies file_index
-render_all(template_files) # Uses file_index
+copy_files()
+build_sass()
+render_all(template_files)
