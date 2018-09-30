@@ -1,4 +1,8 @@
+#!/usr/bin/env python3
+
+import sys
 from fabric import task
+from fabric import Connection
 from shutil import rmtree
 from shutil import copyfile
 from os import listdir
@@ -20,6 +24,16 @@ file_index = {} # Contains all proper links for files
 
 
 ############ Fabric tasks
+
+@task
+def ssh_copy_files(ctx):
+    connection = Connection(host="wiki.devblok.me", user="root")
+    asset_files = [f for f in listdir(files_path) if isfile(join(files_path, f))]
+    with connection.cd("/usr/share/nginx/html/"):
+        for i, asset in enumerate(asset_files):
+            file_index[asset] = "http://wiki.devblok.me/" + files_path + asset
+            connection.put(files_path + asset, files_path + asset)
+    print(file_index)
 
 @task
 def render(ctx):
@@ -50,22 +64,6 @@ def upload_files():
     file_index = {}
 
 
-def copy_files():
-    mkdir(build_dir + files_path)
-    asset_files = [f for f in listdir(files_path) if isfile(join(files_path, f))]
-    for i, asset in enumerate(asset_files):
-        file_index[asset] = files_path + asset
-        copyfile(files_path + asset, build_dir + files_path + asset)
-
-
-def render_all(templates):
-    for i, filename in enumerate(templates):
-        template = load_template(filename)
-        with open(build_dir + filename.rpartition('.')[0], "wb") as f:
-            page = template.render(asset=make_link)
-            f.write(page.encode("utf-8"))
-
-
 def load_template(template):
     loader = FileSystemLoader(["./categories", "./templates"])
     environment = Environment(loader=loader)
@@ -79,8 +77,3 @@ def edit_page(content):
     # submit form data
     return
 
-
-############ Template function injections
-
-def make_link(asset):
-    return file_index.get(asset)
