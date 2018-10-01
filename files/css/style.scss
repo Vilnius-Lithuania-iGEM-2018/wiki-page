@@ -1,0 +1,138 @@
+
+@keyframes imgRotate {
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes navClick {
+    0% {
+        transform: translateY(20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+*,
+*::after,
+*::before {
+    margin:0;
+    padding:0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+
+    body {
+        background-color: #e7e7e8;
+        font-family: "Futura", sans-serif;
+    }
+
+    a {
+        text-decoration: none;
+        color:#000;
+    }
+
+    ul, ol {
+        list-style: none;
+    }
+}
+
+@font-face {
+    font-family: "Futura";
+    src: url("FuturaPTMedium.woff") format('woff');
+}
+
+
+.nav {
+    display: flex;
+    justify-content:center;
+
+    .nav__nav-items {
+        display: flex;
+        flex-wrap: nowrap;
+
+        li {
+            padding:3em 4em;
+            display: inline-block;
+
+            .nav__nav-link {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                text-decoration: none;
+                color:#000;
+                text-transform: none;
+                transition: all .25s linear;
+            }
+
+            .nav__nav-link:hover {
+                transform:scale(1.5);
+                text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+            
+            }
+
+            .nav__nav-logo {
+                width:4em;
+                height:4rem;
+
+                &:hover {
+                    animation: imgRotate 1s linear;
+                }
+            }
+
+            .nav__nav-logo-text {
+                flex: 0 0 100%;
+                text-align: center;
+                margin-top: 1.75em;
+                font-size:1.5rem;
+            }
+        }
+    }
+}
+
+.invert-box {
+    bottom:3em;
+    right:3em;
+    position:absolute;
+    transition: transform .3s linear;
+}
+
+.invert-box:hover {
+    transform: scale(1.3);
+}
+.invert-box__image {
+    width:5em;
+    height:5em;
+}
+.invert-box__invert-text {
+    font-size: 1.3em;
+    display: block;
+    padding: .5em 0;
+    text-align: center;
+}
+
+.sub-menu {
+    position:absolute;
+    top: 40vh;
+    left:10vw;
+    font-size: 1.85rem;
+
+    ul {
+        position: absolute;
+        width:10vw;
+        transition: all 1s linear;
+        visibility: hidden;
+        transform: translateY(30vh);
+        opacity:0;
+
+        li {
+            padding: .25em 0em;
+        }
+    }
+}

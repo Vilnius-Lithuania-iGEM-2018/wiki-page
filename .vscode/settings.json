@@ -1,0 +1,24 @@
+{
+    "saveAndRun": {
+        "commands": [
+          {
+            "match": "\\.html.j2$",
+            "cmd": "cd C:\\Users\\Kasparas\\Desktop\\wiki\\wiki-page && python build.py && echo 'Succesfully builded'",
+            "useShortcut": false,
+            "silent": false
+          },
+          {
+            "match": "\\.html$",
+            "cmd": "cd C:\\Users\\Kasparas\\Desktop\\wiki\\wiki-page && python build.py && echo 'Succesfully builded'",
+            "useShortcut": false,
+            "silent": false
+          },
+          {
+            "match": "\\.scss$",
+            "cmd": "cd C:\\Users\\Kasparas\\Desktop\\wiki\\wiki-page && python build.py && echo 'Succesfully builded'",
+            "useShortcut": false,
+            "silent": false
+          }
+        ]
+      }
+}
