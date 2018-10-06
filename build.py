@@ -9,13 +9,20 @@
 #             creates links for local use
 
 import os
-from os.path import isfile, join
+import shutil
+from os.path import isfile, join, isdir
 from shutil import copyfile, rmtree
 from subprocess import call
 from jinja2 import Template, Environment, FileSystemLoader
 
 build_path = os.getenv('BUILD_PATH', "build/")
 assets_path = os.getenv('ASSETS_PATH', "files/")
+
+js_path = os.getenv('ASSETS_PATH', "files/js")
+images_path = os.getenv('ASSETS_PATH', "files/images/")
+fonts_path = os.getenv('ASSETS_PATH', "files/fonts/")
+model_path = os.getenv('ASSETS_PATH', "files/model/")
+
 sass_assets_path = os.getenv('SASS_ASSETS_PATH', "files/css/")
 
 # This mechanism is for asset links in templates.
@@ -45,10 +52,19 @@ def build_sass():
 
 
 def copy_files():
-    os.mkdir(build_path + assets_path)
+    try:
+        os.mkdir(build_path + assets_path)
+    except OSError:
+        if os.path.isdir(build_path + assets_path):
+            shutil.rmtree(build_path + assets_path)
+            os.mkdir(build_path + assets_path)
     asset_files = [f for f in os.listdir(assets_path) if isfile(join(assets_path, f))]
+    asset_dirs = [f for f in os.listdir(assets_path) if isdir(join(assets_path, f))]
     for i, asset in enumerate(asset_files):
-        copyfile(assets_path + asset, build_path + assets_path + asset)
+        copyfile(images_path + image, build_path + assets_path + image)
+    for i, folder in enumerate(asset_dirs):
+        if folder != "css":
+            shutil.copytree(assets_path+folder, build_path + assets_path + folder);
 
 def make_file_index():
     index = {}
@@ -75,14 +91,22 @@ def load_template(template):
     environment = Environment(loader=loader)
     return environment.get_template("Home.html.j2")
 
-    
+def readonly_handler(func, path, execinfo): 
+    os.chmod(path, 128) #or os.chmod(path, stat.S_IWRITE) from "stat" module
+    func(path)       
 # Build procedure
 file_index = read_file_index_or_make_local_links()
+shutil.rmtree('build', onerror=readonly_handler)
+
+while os.path.isdir('build'):
+    pass
 template_files = [f for f in os.listdir("categories/") if isfile(join("categories/", f))]
 try:
-    os.mkdir(build_path)
+    if os.path.exists(build_path):
+        shutil.rmtree(build_path, ignore_errors=True)
+        os.mkdir(build_path)
 except OSError:
-    rmtree(build_path)
+    shutil.rmtree(build_path, ignore_errors=True)
     os.mkdir(build_path)
 
 copy_files()

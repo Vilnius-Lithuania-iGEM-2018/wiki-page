@@ -7,18 +7,17 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>iGEM Wiki Page</title>
         <link rel="stylesheet" href="files/style.css">
-        <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> 
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="files/js/three/core/three.min.js"></script>
+        <script src="files/js/three/controls/OrbitControls.js"></script>
+        <script src="files/js/three/renderers/CSS2DRenderer.js"></script>
+        <script src="files/js/three/loaders/GLTFLoader.js"></script>
     {% endblock %}
     </head>
     <body>
         {% include 'Nav.html' %}
-        <div class="invert-box">
-            <a href="#">
-                <img class="invert-box__image" src="../files/INVERT@300x.png" />
-                <span class="invert-box__invert-text">invert</span>
-            </a>
-        </div>
         {% block body %}
         {% endblock %}  
+    <script type="text/javascript" src="files/js/three/liposome.js"></script>
     </body>
 </html>

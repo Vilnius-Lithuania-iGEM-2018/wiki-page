@@ -41,11 +41,19 @@ html {
     ul, ol {
         list-style: none;
     }
+
+    canvas {
+        left:15%;
+        background-color: #e7e7e8;
+        position:absolute;
+        height:50vh;
+        z-index:-1;
+    }
 }
 
 @font-face {
     font-family: "Futura";
-    src: url("FuturaPTMedium.woff") format('woff');
+    src: url("fonts/FuturaPTMedium.woff") format('woff');
 }
 
 
@@ -134,5 +142,14 @@ html {
         li {
             padding: .25em 0em;
         }
+    }
+}
+
+.hexagon {
+    position:absolute;
+    top:20vh;
+    left:20vw;
+    img {
+        width:60vw;
     }
 }
