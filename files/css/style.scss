@@ -163,14 +163,37 @@ header {
 
 .hexagon {
     display: flex;
+    position: absolute;
     margin-top:2%;
     justify-content: center;
     align-items: flex-start;
     width: 50vw;
 
     video {
-        display: block;
+        display: inline-block;
+        position:absolute;
         width: 80%;
+        top:15vh;
         height:auto;
+        z-index: 1;
+    }
+
+    .static-image {
+        position:absolute;
+        display: inline-block;
+        top:15vh;
+        width: 80%;
+        height: auto;
+    }
+}
+
+.invert-box {
+    img {
+        width: 2.88em;
+        height: 3em;
+    }
+
+    .invert-text {
+        display: block;
     }
 }

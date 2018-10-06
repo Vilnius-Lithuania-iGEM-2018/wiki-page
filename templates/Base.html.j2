@@ -19,9 +19,16 @@
         {% block body %}
         {% endblock %}  
     <div class="hexagon">
-        <video class="liposome-video" infinite muted inline>
-            <source class="liposome-exposition" src="/files/images/Attributions.mp4" type="video/mp4">
+        <video class="liposome-video" infinite muted inline poster="">
+            <source class="liposome-exposition loading" src="/files/images/Attributions.mp4" type="video/mp4">
         </video>
+        <img class="static-image" src="/files/images/static.png"/>
+    </div>
+    <div class="invert-box">
+        <a href="#" class="invert-image">
+            <img src="/files/images/INVERT@300x.png"/>
+        </a>
+        <span class="invert-text">invert</span>
     </div>
     {# <script type="text/javascript" src="files/js/three/liposome.js"></script> #}
     </body>

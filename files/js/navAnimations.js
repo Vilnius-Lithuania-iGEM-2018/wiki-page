@@ -24,6 +24,8 @@ var dict = [{
     hovered: false
 }];
 
+var inverted = false;
+
 $(document).ready(function() {
     $('.nav__nav-items>li>a').mouseover(function() {
         var childIndex = $(this.parentElement).index();
@@ -33,6 +35,30 @@ $(document).ready(function() {
     $('.nav__nav-items>li>a').mouseleave(function() {
         var child = $(this.parentElement).index();
         setTimeout(function(){toggleSubMenu(child,false)},5000);
+    })
+
+    $('.invert-image').click(function() {
+        inverted = !inverted;
+
+        if (inverted)
+        {
+            $("body").css("background-color", "#332f2f");
+            $("nav").css("filter", "invert(100%)");
+            $("section").css("filter", "invert(100%)");
+            $(".invert-box").css("filter", "invert(100%)");
+        } else {
+            $("body").css("background-color", "#e7e7e8");
+            $("nav").css("filter", "invert(0%)");
+            $("section").css("filter", "invert(0%)");
+            $(".invert-box").css("filter", "invert(0%)");
+        }
+    });
+    
+    $('.sub-menu-li').mouseover(function() {
+        var item = $(this).attr("name");
+        $('.liposome-exposition').attr('src', '/files/images/' + item+'.mp4');
+        $('.liposome-video')[0].load();
+        $('.liposome-video')[0].play();
     })
 })
 
@@ -71,11 +97,4 @@ function checkOtherHoveredIcons(index) {
             }
         }
     });
-
-    $('.sub-menu-li').mouseover(function() {
-        var item = $(this).attr("name");
-        $('.liposome-exposition').attr('src', '/files/images/' + item+'.mp4');
-        $('.liposome-video')[0].load();
-        $('.liposome-video')[0].play();
-    })
 }
