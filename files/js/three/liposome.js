@@ -95,7 +95,7 @@
         camera.position.copy(center);
         camera.position.x += size / 2.0;
         camera.position.y += size / 5.0;
-        camera.position.z += size / 2.0;
+        camera.position.z += size / 2;
         camera.lookAt(center);
 
         //this.setCamera(DEFAULT_CAMERA);
@@ -415,10 +415,9 @@
     }
 
     function onWindowResize() {
-        camera.aspect = window.innerWidth / window.innerHeight;
-        camera.updateProjectionMatrix();
-
-        renderer.setSize( window.innerWidth, window.innerHeight );
+        //camera.updateProjectionMatrix();
+        //camera.aspect = window.innerWidth / window.innerHeight;
+       // renderer.setSize( window.innerWidth, window.innerHeight );
     }
 
     function handleColorChange( color ) {

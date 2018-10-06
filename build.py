@@ -93,11 +93,13 @@ def load_template(template):
 
 def readonly_handler(func, path, execinfo): 
     os.chmod(path, 128) #or os.chmod(path, stat.S_IWRITE) from "stat" module
-    func(path)       
+    func(path)
 # Build procedure
 file_index = read_file_index_or_make_local_links()
-shutil.rmtree('build', onerror=readonly_handler)
-
+try:
+    shutil.rmtree('build', onerror=readonly_handler)
+except OSError:
+    pass
 while os.path.isdir('build'):
     pass
 template_files = [f for f in os.listdir("categories/") if isfile(join("categories/", f))]

@@ -8,16 +8,21 @@
         <title>iGEM Wiki Page</title>
         <link rel="stylesheet" href="files/style.css">
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-        <script src="files/js/three/core/three.min.js"></script>
+        {# <script src="files/js/three/core/three.min.js"></script>
         <script src="files/js/three/controls/OrbitControls.js"></script>
         <script src="files/js/three/renderers/CSS2DRenderer.js"></script>
-        <script src="files/js/three/loaders/GLTFLoader.js"></script>
+        <script src="files/js/three/loaders/GLTFLoader.js"></script> #}
     {% endblock %}
     </head>
     <body>
         {% include 'Nav.html' %}
         {% block body %}
         {% endblock %}  
-    <script type="text/javascript" src="files/js/three/liposome.js"></script>
+    <div class="hexagon">
+        <video class="liposome-video" infinite muted inline>
+            <source class="liposome-exposition" src="/files/images/Attributions.mp4" type="video/mp4">
+        </video>
+    </div>
+    {# <script type="text/javascript" src="files/js/three/liposome.js"></script> #}
     </body>
 </html>

@@ -1,22 +1,6 @@
+$black: #000;
+$white: #fff;
 
-@keyframes imgRotate {
-    50% {
-        transform: rotate(180deg);
-    }
-    100% {
-        transform: rotate(180deg);
-    }
-}
-
-@keyframes navClick {
-    0% {
-        transform: translateY(20px);
-    }
-
-    100% {
-        transform: translateY(0px);
-    }
-}
 *,
 *::after,
 *::before {
@@ -31,6 +15,9 @@ html {
     body {
         background-color: #e7e7e8;
         font-family: "Futura", sans-serif;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
     a {
@@ -44,6 +31,7 @@ html {
 
     canvas {
         left:15%;
+        border:2px solid black;
         background-color: #e7e7e8;
         position:absolute;
         height:50vh;
@@ -56,53 +44,81 @@ html {
     src: url("fonts/FuturaPTMedium.woff") format('woff');
 }
 
-
+header {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
 .nav {
     display: flex;
     justify-content:center;
+    margin-top:2.5%;
+    align-items: center;
+    width:60%;
+    }
 
     .nav__nav-items {
         display: flex;
+        width: 100%;
+        justify-content:space-between;
         flex-wrap: nowrap;
 
         li {
-            padding:3em 4em;
-            display: inline-block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width:35%;
+            height:15vh;
+            &:hover {
+                .image__container {
+                    padding:1em;
+                    background-color:$black;
+                    box-shadow: 0px 0px 5px #000;
+                    border-radius: 100%;
+                }
 
+                img {
+                    filter:invert(100%);
+                }
+
+                .nav__nav-link {
+                    width: 100%;
+                    height:100%;
+                }
+            }
             .nav__nav-link {
                 display: flex;
                 flex-wrap: wrap;
+                width:65%;
+                height: 100%;
                 justify-content: center;
+                align-content: center;
                 text-decoration: none;
                 color:#000;
                 text-transform: none;
-                transition: all .25s linear;
-            }
-
-            .nav__nav-link:hover {
-                transform:scale(1.5);
-                text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
-            
             }
 
             .nav__nav-logo {
-                width:4em;
-                height:4rem;
-
-                &:hover {
-                    animation: imgRotate 1s linear;
-                }
+                width: 2.88em;
+                height: 3em;
             }
 
             .nav__nav-logo-text {
                 flex: 0 0 100%;
+                margin-top: .5em;
                 text-align: center;
-                margin-top: 1.75em;
-                font-size:1.5rem;
+                font-size:1.2em;
+                white-space: nowrap;
             }
         }
+
+        // li:nth-child(4):hover {
+        //     .nav__nav-logo-text {
+        //         font-size:1em;
+        //     }
+        // }
+
     }
-}
 
 .invert-box {
     bottom:3em;
@@ -129,12 +145,12 @@ html {
     position:absolute;
     top: 40vh;
     left:10vw;
-    font-size: 1.85rem;
+    font-size: 1.35rem;
 
     ul {
         position: absolute;
         width:10vw;
-        transition: all 1s linear;
+        // transition: all 1s linear;
         visibility: hidden;
         transform: translateY(30vh);
         opacity:0;
@@ -146,10 +162,15 @@ html {
 }
 
 .hexagon {
-    position:absolute;
-    top:20vh;
-    left:20vw;
-    img {
-        width:60vw;
+    display: flex;
+    margin-top:2%;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50vw;
+
+    video {
+        display: block;
+        width: 80%;
+        height:auto;
     }
 }
