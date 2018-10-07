@@ -89,7 +89,7 @@ def render_all(templates):
 def load_template(template):
     loader = FileSystemLoader(["./categories", "./templates"])
     environment = Environment(loader=loader)
-    return environment.get_template("Home.html.j2")
+    return environment.get_template(template)
 
 def readonly_handler(func, path, execinfo): 
     os.chmod(path, 128) #or os.chmod(path, stat.S_IWRITE) from "stat" module
