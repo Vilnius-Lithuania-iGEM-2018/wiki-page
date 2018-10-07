@@ -45,12 +45,16 @@ $(document).ready(function() {
             $("body").css("background-color", "#332f2f");
             $("nav").css("filter", "invert(100%)");
             $("section").css("filter", "invert(100%)");
-            $(".invert-box").css("filter", "invert(100%)");
+            $(".invert-image").css("background-color", "#332f2f");
+            $(".invert-image").css("filter", "invert(0%)");
+            $(".invert-text").css("color", "#fff");
         } else {
             $("body").css("background-color", "#e7e7e8");
             $("nav").css("filter", "invert(0%)");
             $("section").css("filter", "invert(0%)");
-            $(".invert-box").css("filter", "invert(0%)");
+            $(".invert-image").css("background-color", "#e7e7e8");
+            $(".invert-image").css("filter", "invert(0%)");
+            $(".invert-text").css("color", "#000");
         }
     });
     
