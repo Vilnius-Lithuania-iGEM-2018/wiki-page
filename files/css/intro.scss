@@ -13,13 +13,8 @@ html {
     box-sizing: border-box;
 
     body {
-        background-image: url('/files/images/Background.jpg');
-        background-position: center;
-        background-size: cover;
-        font-family: "Futura", sans-serif;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
+        background-color: #332F2F;
+        font-family: "Futura", "sans-serif";
     }
 
     a {
@@ -30,5 +25,142 @@ html {
     ul, ol {
         list-style: none;
     }
+}
 
+@font-face {
+    font-family: "Futura";
+    src: url("fonts/FuturaPTMedium.woff") format('woff');
+}
+
+.logo {
+    position: absolute;
+    top:6vh;
+    left:5vw;
+
+    .logo__image{
+        width:10em;
+        height:auto;
+    }
+}
+
+.skip {
+    position: absolute;
+    top:6vh;
+    right:5vw;
+    .skip__image{
+        width:4em;
+        height:auto;
+    }
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.media {
+    min-width: 0;
+    text-align: center;
+}
+.pulsing-logo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    transition: all 1s ease-in;
+
+    .pulsing-logo__project-text {
+        flex:100%;
+        width: 100%;
+        display:none;
+        text-align: center;
+        padding:2em 2em 0em 2em;
+    }
+
+    .pulsing-logo__image {
+        width: 15%;
+        max-width: 100%; 
+        transition: display 1s ease-in;
+        }
+
+    }
+
+.canals {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 50vh;
+    height: 90vh;
+
+    .canals__image {
+        display: none;
+        width:100vw;
+        margin-top:-3%;
+        height: 90vh;
+    }
+
+    .canals__lipid-image, .canals__water-image, .canals__oil-image {
+        position: absolute;
+        margin-top:-3%;
+        display: none;
+        width:100vw;
+        height: 90vh;
+    }
+    .canals__water-image {
+        z-index: 1;
+    }
+    .canals__oil-image {
+        z-index: 2;
+    }
+    .canals__lipid-image {
+        z-index: 3;
+    }
+}
+
+.buttons {
+    position: absolute;
+    display: none;
+    right: 10vw;
+    top: 50vh;
+    z-index: 3;
+    .off-button {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        flex:1;
+    }
+    .button-anchor {
+        display: flex;
+        flex:1;
+        align-items: center;
+
+        img {
+            width: 40%;
+        }
+    }   
+    .button-text {
+        color:white;
+        font-size:1.1em;
+    }
+}
+.liposomes {
+    position:absolute;
+    z-index:-1;
+    height:95vh;
+    width:100vw;
+    top:-12vh;
+    video {
+        position:absolute;
+        z-index:-1;
+        width:100vw;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .liposomes {
+        top:30vh;
+    }
 }
