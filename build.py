@@ -9,6 +9,7 @@
 #             creates links for local use
 
 import os
+import sass
 import shutil
 import distutils.dir_util
 from os.path import isfile, join, isdir
@@ -43,13 +44,14 @@ def read_file_index_or_make_local_links():
 
 
 def build_sass():
-    sass_files = [f for f in os.listdir(sass_assets_path) if isfile(join(sass_assets_path, f))]
-    for i, sass_file in enumerate(sass_files):
-        call([
-            'sass', 
-            sass_assets_path + sass_file, 
-            build_path + assets_path + sass_file.rpartition('.')[0] + ".css"
-        ])
+    sass.compile(dirname=(sass_assets_path, build_path + '/' + sass_assets_path), output_style='compressed')
+    # sass_files = [f for f in os.listdir(sass_assets_path) if isfile(join(sass_assets_path, f))]
+    # for i, sass_file in enumerate(sass_files):
+    #     call([
+    #         'sass', 
+    #         sass_assets_path + sass_file, 
+    #         build_path + assets_path + sass_file.rpartition('.')[0] + ".css"
+    #     ])
 
 
 def copy_files():
