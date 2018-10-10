@@ -3,7 +3,28 @@ $white: #fff;
 
 @font-face {
     font-family: "Futura";
-    src: url("fonts/FuturaPTMedium.woff") format('woff');
+    src: url("../fonts/FuturaPTMedium.woff") format('woff');
+}
+
+@font-face {
+    font-family: 'FuturaPTBook';
+    src: url('../fonts/FuturaPTBook.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FuturaLightOblique';
+    src: url('../fonts/FuturaPTLightOblique.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FuturaPTLight';
+    src: url('../fonts/FuturaPTLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 *,

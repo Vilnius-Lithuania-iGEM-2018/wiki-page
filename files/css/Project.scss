@@ -1,49 +1,172 @@
 $black: #000;
 $white: #fff;
 
+::-webkit-scrollbar {
+    width: 15px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 1px #fff;
+    border-radius: 10px;
+    width: 15px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #b9cebf; 
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
 .project-wrapper {
     display: flex;
-    width:90vw;
+    width:95vw;
     align-items: center;
 }
 .header-area {
     height:100vh;
     align-items: center;
+    justify-content: flex-start;
     flex:2;
+
     .navigation {
         width: unset;
-        border:1px solid blue;
-        justify-content: flex-start;
+        height:100vh;
+        // border:1px solid blue;
+        flex-direction: column;
+        justify-content: space-evenly;
         .navigation-list {
             flex-direction:column;
             justify-content: center;
             align-items: center;
 
         }
+
+        .back-icon {
+            width: 4.88em;
+        }
     }
 
 }
 
 .content-area {
-    border:1px solid red;
-    height:80%;
-    flex:5;
+    // border:1px solid red;
+    height:85vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
 
+    .text-wall-carrot-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .round-canals-background {
+        border: 1px solid black;
+        position: absolute;
+        z-index: -1;
+        bottom:0;
+        left:15%;
+        border-radius: 100%;
+        width:25vw;
+        height: 25vw;
+    }
+
+    .carrot-next {
+
+        .carrot-next-icon {
+            width:5em;
+        }
+    }
     .text-wall-area {
         
-    width: 50%;
+    width: 40%;
     height: 80%;
-    overflow-y: hidden;
+    align-self: flex-start;
 
     .text-wall-heading {
         color: #61afaa;
+        font-weight: 500;
+        font-family: 'FuturaPTBook', sans-serif;
         font-size: 5em;
     }
+
+    .pagination-item-wrapper {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width:5%;
+    }
+
+    .pagination {
+        display: flex;
+        justify-content: center;
+        margin: 2% auto;
+        text-align: center;
+        .pagination-anchor {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    .pagination-item {
+        box-shadow: 0px 0px 3px rgba(0,0,0,0.4);
+        display: inline-block;
+        align-self: center;
+        width:0.9em;
+        height:0.9em;
+        margin: 0 0.5em;
+        border-radius: 100%;
+    }
+
+    
+    .pagination-text {
+        flex: 100%;
+        font-size:1.4em;
+        transform:rotate(90deg) translateX(1.5em);
+        text-align: left;
+    }
+
+    .active-item {
+        background-color: #61afaa;
+    }
     .text-wall-area-box {
+        height: 85%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         background-color: rgb(51, 47, 47);
+        box-shadow: -5px 5px 40px 1px rgba(0,0,0,0.6);        
+        z-index: 2;
         color:white;
-        max-height:60vh;
         padding: 2em 2em;
+
+        .text-wall-area-box-heading {
+            padding: 0 0 1em 0;
+            font-family: 'FuturaLightOblique', sans-serif;
+            color: #e7e7e8;
+            font-weight: 500;
+            font-size: 1.8em;
+        }
+
+        .text-content {
+            font-family: 'FuturaPTLight', sans-serif;
+            font-family: 1.3em;
+            color: #e7e7e8;
+            padding: 0 3em 0 1em;
+            font-weight: 100;
+            height:38vh;
+            overflow-y: scroll;
+        }
     }
     }
 }
