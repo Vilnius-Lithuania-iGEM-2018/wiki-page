@@ -10,6 +10,7 @@
 
 import os
 import shutil
+import distutils.dir_util
 from os.path import isfile, join, isdir
 from shutil import copyfile, rmtree
 from subprocess import call
@@ -52,19 +53,14 @@ def build_sass():
 
 
 def copy_files():
-    try:
+    if not os.path.exists(build_path + assets_path):
         os.mkdir(build_path + assets_path)
-    except OSError:
-        if os.path.isdir(build_path + assets_path):
-            shutil.rmtree(build_path + assets_path)
-            os.mkdir(build_path + assets_path)
     asset_files = [f for f in os.listdir(assets_path) if isfile(join(assets_path, f))]
     asset_dirs = [f for f in os.listdir(assets_path) if isdir(join(assets_path, f))]
-    for i, asset in enumerate(asset_files):
-        copyfile(images_path + image, build_path + assets_path + image)
+    # for i, asset in enumerate(asset_files):
+    #     copyfile(images_path + image, build_path + assets_path + image)
     for i, folder in enumerate(asset_dirs):
-        if folder != "css":
-            shutil.copytree(assets_path+folder, build_path + assets_path + folder);
+        distutils.dir_util.copy_tree(assets_path+folder, build_path + assets_path + folder);
 
 def make_file_index():
     index = {}
@@ -96,21 +92,15 @@ def readonly_handler(func, path, execinfo):
     func(path)
 # Build procedure
 file_index = read_file_index_or_make_local_links()
-try:
-    shutil.rmtree('build', onerror=readonly_handler)
-except OSError:
-    pass
-while os.path.isdir('build'):
-    pass
 template_files = [f for f in os.listdir("categories/") if isfile(join("categories/", f))]
 try:
-    if os.path.exists(build_path):
-        shutil.rmtree(build_path, ignore_errors=True)
+    if not os.path.exists(build_path):
         os.mkdir(build_path)
 except OSError:
     shutil.rmtree(build_path, ignore_errors=True)
     os.mkdir(build_path)
 
+shutil.rmtree(build_path, ignore_errors=True)
 copy_files()
 build_sass()
 render_all(template_files)

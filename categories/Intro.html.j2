@@ -48,7 +48,7 @@
                     } else {
                         if (clickedTimes == 2) {
                             $(".pulsing-logo").fadeOut(100);
-                            $(".canals__image").attr("src","files/images/kanalėliai-visi.gif");
+                            $(".canals__image").attr("src","files/images/icons/intro/animation/kanalėliai-visi.gif");
                             $(".canals__image").css("display","inline-block");
                             setTimeout(function() {
                                 $(".buttons").fadeIn();
@@ -69,25 +69,25 @@
                         if (button.name == selectedElementName) {
                             if (!button.status) {
                                 button.status = true;
-                                 $(".button-anchor").find("#" + selectedElementName).attr("src", "files/images/on-gif.gif");
+                                 $(".button-anchor").find("#" + selectedElementName).attr("src", "files/images/icons/intro/buttons/on-gif.gif");
                                  if(selectedElementName == "lipid_phase") {
                                      $(".canals__lipid-image").css("display", "block")
-                                     $(".canals__lipid-image").attr("src", "files/images/pirmas.gif");
+                                     $(".canals__lipid-image").attr("src", "files/images/icons/intro/animation/pirmas.gif");
                                  }
                                  if(selectedElementName == "water_phase") {
                                      $(".canals__water-image").css("display", "block")
-                                     $(".canals__water-image").attr("src", "files/images/trečias.gif");
+                                     $(".canals__water-image").attr("src", "files/images/icons/intro/animation/trečias.gif");
                                  }
                                  if(selectedElementName == "oil_phase") {
                                      $(".canals__oil-image").css("display", "block")
-                                     $(".canals__oil-image").attr("src", "files/images/antras.gif");
+                                     $(".canals__oil-image").attr("src", "files/images/icons/intro/animation/antras.gif");
                                  }
-                                setTimeout(function(){ $(".button-anchor").find("#" + selectedElementName).attr("src", "files/images/on-button.png")
+                                setTimeout(function(){ $(".button-anchor").find("#" + selectedElementName).attr("src", "files/images/icons/intro/buttons/on-button.png")
                                 }, 100);
                             } else {
                                  button.status = false;
-                                 $(".button-anchor").find("#" + selectedElementName).attr("src", "files/images/off-switch.gif");
-                                setTimeout(function(){ $(".button-anchor").find("#" + selectedElementName).attr("src", "files/images/off-button.png")
+                                 $(".button-anchor").find("#" + selectedElementName).attr("src", "files/images/icons/intro/buttons/off-switch.gif");
+                                setTimeout(function(){ $(".button-anchor").find("#" + selectedElementName).attr("src", "files/images/icons/intro/buttons/off-button.png")
                                 }, 100);
                                  if(selectedElementName == "lipid_phase") {
                                      $(".canals__lipid-image").css("display", "none")
@@ -106,7 +106,7 @@
                     })
                     if (checkForStatuses(buttonsStatus) == 3) {
                         setTimeout(function() {
-                            $(".liposomes-video-source").attr("src","files/images/LYPOSOMOS.mp4")
+                            $(".liposomes-video-source").attr("src","files/images/icons/intro/animation/LYPOSOMOS.mp4")
                             $(".liposomes-video")[0].load()
                             $(".buttons").fadeOut()
                             setTimeout(function() {
@@ -115,7 +115,7 @@
                                 $('.canals').fadeOut();
                                 setTimeout(function(){
                                     window.location.replace("index.html");
-                                }, 1000)
+                                }, 100)
                             },9000)
                         },3000)
                     }
@@ -127,11 +127,11 @@
     <body>
     <div class="container">
         <div class="logo">
-            <img class="logo__image" src="files/images/logo.png"/>
+            <img class="logo__image" src="files/images/icons/intro/logos/logo.png"/>
         </div>
         <div class="skip">
             <a class="skip__anchor" href="#">
-                <img class="skip__image" src="files/images/skip.png"/>
+                <img class="skip__image" src="files/images/icons/intro/logos/skip.png"/>
             </a>
         </div>
         <div class="canals">
@@ -148,13 +148,13 @@
         </div>
         <div class="buttons">
             <div class="off-button">
-                <a class="button-anchor" href="#"><img loop="false" id="lipid_phase" src="files/images/off-button.png" /><span class="button-text">Outer Phase</span></a>
+                <a class="button-anchor" href="#"><img loop="false" id="lipid_phase" src="files/images/icons/intro/buttons/off-button.png" /><span class="button-text">Outer Phase</span></a>
             </div>
             <div class="off-button">
-                <a class="button-anchor" href="#"><img loop="false" id="water_phase" src="files/images/off-button.png" /><span class="button-text">Inner Phase</span></a>
+                <a class="button-anchor" href="#"><img loop="false" id="water_phase" src="files/images/icons/intro/buttons/off-button.png" /><span class="button-text">Inner Phase</span></a>
             </div>
             <div class="off-button">
-                <a class="button-anchor" href="#"><img loop="false" id="oil_phase" src="files/images/off-button.png" /><span class="button-text">Lipid Phase</span></a>
+                <a class="button-anchor" href="#"><img loop="false" id="oil_phase" src="files/images/icons/intro/buttons/off-button.png" /><span class="button-text">Lipid Phase</span></a>
             </div>
         </div>
             <div class="pulsing-logo">
@@ -164,7 +164,7 @@
                     Nullam pretium eros vel dui fringilla maximus. Phasellus rutrum sed orci eget eleifend Phasellus rutrum sed orci eget eleifend
                 </p>
                 <div class="media">
-                    <img class="pulsing-logo__image" src="files/images/pulsinglogo.gif" />
+                    <img class="pulsing-logo__image" src="files/images/icons/intro/animation/pulsinglogo.gif" />
                 </div>
             </div>
     </div>

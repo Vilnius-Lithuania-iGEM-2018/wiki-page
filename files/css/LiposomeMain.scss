@@ -1,0 +1,48 @@
+.hexagon {
+    // border: 1px solid yellow;
+    flex:3;
+    width: 50vw;
+    height:70vh;
+
+    .liposome-container {
+        position: relative;
+
+    }
+
+    video {
+        position:absolute;
+        top: 3vw;
+        left: 5vw;
+        display: inline-block;
+        width: 55%;
+        height:auto;
+        z-index: 1;
+    }
+
+    .static-image {
+        position:absolute;
+        top: 3vw;
+        left: 5vw;
+        display: inline-block;
+        width: 55%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+
+    .hexagon {
+
+    
+        video {
+            width: 70%;
+            left:3vw;
+        }
+    
+        .static-image {
+            width: 70%;
+            left:3vw;
+        }
+    }
+
+}

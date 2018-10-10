@@ -6,34 +6,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>iGEM Wiki Page</title>
-        <link rel="stylesheet" href="files/style.css">
-        <script
-  src="http://code.jquery.com/jquery-1.11.1.min.js"
-  integrity="sha256-VAvG3sHdS5LqTT+5A/aeq/bZGa/Uj04xKxY8KM/w9EE="
-  crossorigin="anonymous"></script>
-        {# <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> #}
-        {# <script src="files/js/three/core/three.min.js"></script>
-        <script src="files/js/three/controls/OrbitControls.js"></script>
-        <script src="files/js/three/renderers/CSS2DRenderer.js"></script>
-        <script src="files/js/three/loaders/GLTFLoader.js"></script> #}
+        <link rel="stylesheet" type="text/css" href="files/styles.css">
+        <script src="files/js/jquery-1.11.1.min.js" integrity="sha256-VAvG3sHdS5LqTT+5A/aeq/bZGa/Uj04xKxY8KM/w9EE=" crossorigin="anonymous"></script>
     {% endblock %}
     </head>
     <body>
-        {% include 'Nav.html' %}
+        {% include 'partials/Nav.html.j2' %}
+        <div class="main-content-container">
+        {% include 'partials/Submenu.html.j2' %}
         {% block body %}
-        {% endblock %}  
-    <div class="hexagon">
-        <video class="liposome-video" infinite muted inline poster="">
-            <source class="liposome-exposition loading" src="/files/images/Attributions.mp4" type="video/mp4">
-        </video>
-        <img class="static-image" src="/files/images/static.png"/>
-    </div>
-    <div class="invert-box">
-        <a href="#" class="invert-image">
-            <img src="/files/images/INVERT@300x.png"/>
-        </a>
-        <span class="invert-text">invert</span>
-    </div>
-    {# <script type="text/javascript" src="files/js/three/liposome.js"></script> #}
+        {% endblock %} 
+        {% include 'partials/InvertBox.html.j2' %}
+    <script src="../files/js/navAnimations.js"> </script>
+    <script>
+        $('.hamburger-anchor').click(function() {
+            $('.sidebar').toggleClass("sidebar-expanded")
+            $('.sidebar').get(0).appendChild($('.navigation').get(0))
+        })
+        $('.close-anchor').click(function() {
+            $('.sidebar').toggleClass("sidebar-expanded")
+        })
+    </script>
     </body>
 </html>

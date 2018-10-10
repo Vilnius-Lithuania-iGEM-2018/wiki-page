@@ -1,53 +1,73 @@
-var dict = [{          
-    key:   0,
+var dict = [{
+    key: 0,
     value: ".sub-menu__project-sub-menu",
     hovered: false
 },
-{          
-    key:   1,
+{
+    key: 1,
     value: ".sub-menu__parts-sub-menu",
     hovered: false
 },
-{          
-    key:   2,
+{
+    key: 2,
     value: ".sub-menu__notebook-sub-menu",
     hovered: false
 },
-{          
-    key:   3,
+{
+    key: 3,
     value: ".sub-menu__humanpractices-sub-menu",
     hovered: false
 },
-{          
-    key:   4,
+{
+    key: 4,
     value: ".sub-menu__team-sub-menu",
     hovered: false
 }];
 
 var inverted = false;
 
-$(document).ready(function() {
-    $('.nav__nav-items>li>a').mouseover(function() {
+$(document).ready(function () {
+    $('.navigation-list-item-anchor').mouseover(function () {
         var childIndex = $(this.parentElement).index();
-        toggleSubMenu(childIndex,true);
+        toggleSubMenu(childIndex, true);
     })
 
-    $('.nav__nav-items>li>a').mouseleave(function() {
+    $('.navigation-list-item-anchor').mouseleave(function () {
         var child = $(this.parentElement).index();
-        setTimeout(function(){toggleSubMenu(child,false)},5000);
+        setTimeout(function () { toggleSubMenu(child, false) }, 5000);
     })
 
-    $('.invert-image').click(function() {
+    $('.sub-menu-li').mouseover(function () {
+        var item = $(this).attr("name");
+        $('.liposome-exposition').attr('src', '/files/images/Expositions/' + item + '.mp4');
+        $('.liposome-video')[0].load();
+        $('.liposome-video')[0].play();
+    })
+
+    $('.invert-image').click(function () {
         inverted = !inverted;
 
-        if (inverted)
-        {
+        if (inverted) {
             $("body").css("background-color", "#332f2f");
             $("nav").css("filter", "invert(100%)");
             $("section").css("filter", "invert(100%)");
             $(".invert-image").css("background-color", "#332f2f");
             $(".invert-image").css("filter", "invert(0%)");
             $(".invert-text").css("color", "#fff");
+
+            $(".liposome-exposition").attr("src", "/files/images/invertedExpositions/Attributions.mp4")
+            $('.liposome-video')[0].load();
+            $(".static-image").attr("src", "/files/images/invertedExpositions/static.jpg")
+            $(".static-image").attr("srcset", "/files/images/invertedExpositions/static.jpg")
+            $('.sub-menu-li').unbind()
+            $('.sub-menu-li').mouseover(function () {
+                var item = $(this).attr("name");
+                $('.liposome-exposition').attr('src', '/files/images/invertedExpositions/' + item + '.mp4');
+                $('.liposome-video')[0].load();
+                $('.liposome-video')[0].play();
+            })
+
+
         } else {
             $("body").css("background-color", "#e7e7e8");
             $("nav").css("filter", "invert(0%)");
@@ -55,15 +75,21 @@ $(document).ready(function() {
             $(".invert-image").css("background-color", "#e7e7e8");
             $(".invert-image").css("filter", "invert(0%)");
             $(".invert-text").css("color", "#000");
+
+            $(".liposome-exposition").attr("src", "/files/images/Attributions.mp4")
+            $('.liposome-video')[0].load();
+            $(".static-image").attr("src", "/files/images/Expositions/static.png")
+            $(".static-image").attr("srcset", "/files/images/Expositions/static.png")
+            $('.sub-menu-li').unbind()
+            $('.sub-menu-li').mouseover(function () {
+                var item = $(this).attr("name");
+                $('.liposome-exposition').attr('src', '/files/images/Expositions/' + item + '.mp4');
+                $('.liposome-video')[0].load();
+                $('.liposome-video')[0].play();
+            })
+
         }
     });
-    
-    $('.sub-menu-li').mouseover(function() {
-        var item = $(this).attr("name");
-        $('.liposome-exposition').attr('src', '/files/images/' + item+'.mp4');
-        $('.liposome-video')[0].load();
-        $('.liposome-video')[0].play();
-    })
 })
 
 function toggleSubMenu(childIndex, show) {
@@ -77,18 +103,17 @@ function toggleSubMenu(childIndex, show) {
 }
 
 function showMenu(childIndex) {
-    $(dict[childIndex].value).css('visibility','visible');
-    $(dict[childIndex].value).css('opacity','1');
-    $(dict[childIndex].value).css('transform','translateY(0)');
+    $(dict[childIndex].value).css('visibility', 'visible');
+    $(dict[childIndex].value).css('opacity', '1');
+    $(dict[childIndex].value).css('transform', 'translateY(0)');
 }
 
 function hideMenu(childIndex) {
     var isHovered = $(dict[childIndex].value).is(":hover");
-    if (!isHovered)
-    {
-        $(dict[childIndex].value).css('visibility','hidden');
-        $(dict[childIndex].value).css('opacity','0');
-        $(dict[childIndex].value).css('transform','translateY(30vh)');
+    if (!isHovered) {
+        $(dict[childIndex].value).css('visibility', 'hidden');
+        $(dict[childIndex].value).css('opacity', '0');
+        $(dict[childIndex].value).css('transform', 'translateY(30vh)');
     }
 }
 

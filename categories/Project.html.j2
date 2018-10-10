@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    {% block head %}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>iGEM Wiki Page - Project</title>
+        <link rel="stylesheet" type="text/css" href="files/project-styles.css">
+        <script src="files/js/jquery-1.11.1.min.js" integrity="sha256-VAvG3sHdS5LqTT+5A/aeq/bZGa/Uj04xKxY8KM/w9EE=" crossorigin="anonymous"></script>
+    {% endblock %}
+    </head>
+    <body>
+    <div class="project-wrapper">
+        {% include 'partials/Nav.html.j2' %}
+        <div class="content-area">
+            <div class="text-wall-area">
+                <h1 class="text-wall-heading">Description</h1>
+                <div class="text-wall-area-box">
+                    <h2>Lorem ipsum, dolor sit amet consectetur adipisicing</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit modi aut eos repudiandae quod, illum iusto sunt soluta consectetur, ullam numquam nam, libero adipisci perspiciatis. Saepe enim sequi exercitationem accusamus?
+Aut, vel sunt, eos quidem distinctio mollitia molestiae quisquam nesciunt ea voluptate atque neque id harum cupiditate ab! Pariatur blanditiis quam recusandae excepturi quae? Perferendis, sequi. Ipsam dignissimos nesciunt delectus.
+Vel iusto neque, hic minima fuga cupiditate facilis debitis iste aliquam iure voluptatibus odio consequuntur molestiae quia possimus esse deleniti ut consectetur eveniet. Tenetur repudiandae, numquam molestias sequi ipsa consequuntur?
+Repellat quasi fugiat inventore, deserunt amet beatae, eveniet aliquam ipsum tempora quos sapiente? Sequi odit placeat temporibus. Doloremque quia quaerat, ea ex minus sit? Fugiat, explicabo aliquid! Quam, reiciendis veritatis.
+Provident veniam omnis quae magnam ipsa nisi id exercitationem, esse nihil nam veritatis quo ab ullam modi est sint. Porro, atque amet? Ipsam nihil aspernatur molestiae doloribus, repellendus totam eius.
+Officia adipisci cumque, labore error sint quisquam maiores explicabo alias! Nam, expedita qui! Ut officiis non, a doloremque animi quis impedit incidunt enim quia minus id! Maiores placeat vitae ipsa.
+Et accusantium pariatur a natus non nobis fugiat? Modi tenetur est, repellendus molestias odio doloremque aliquid ut ex eligendi iure, suscipit maxime perspiciatis numquam officiis deleniti corrupti neque sequi magni.
+Assumenda, repudiandae, ipsa sit perspiciatis ipsam accusantium deleniti veniam fugiat nesciunt tenetur, odio iste. Libero, laudantium quis omnis accusantium debitis, magnam exercitationem, esse optio tempora incidunt nam? Corporis, accusantium nostrum.
+Laborum accusamus fugiat, sed sunt pariatur atque, error commodi inventore, tempore quae ducimus? Reprehenderit molestias, possimus error harum amet nulla id asperiores numquam porro aspernatur temporibus, perspiciatis fugiat voluptate ea.
+Soluta repellendus consectetur recusandae molestiae voluptate ut deleniti ad quam asperiores saepe ipsam tempora aliquam iure distinctio modi, explicabo illo architecto maiores aperiam sequi exercitationem? Quis atque temporibus commodi nulla.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include 'partials/InvertBox.html.j2' %}
+    <script src="../files/js/navAnimations.js"> </script>
+    <script>
+    $(document).ready(function(){
+        $(".navigation-list-item:nth-child(1) .image-container").addClass("is-active")
+    })
+    </script>
+    </body>
+</html>
