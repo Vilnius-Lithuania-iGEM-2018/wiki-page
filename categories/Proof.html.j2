@@ -1,0 +1,151 @@
+{% extends "InnerPage.html.j2" %}
+{% block body %}
+<h1 class="text-wall-heading">Proof</h1>
+<div class="text-wall-area-box">
+    <h2 class="text-wall-area-box-heading">Lorem ipsum, dolor sit amet consectetur adipisicing</h2>
+    <div class="scroll-area">
+        <p class="text-content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit modi aut eos repudiandae quod, illum iusto sunt soluta consectetur, ullam numquam nam, libero adipisci perspiciatis. Saepe enim sequi exercitationem accusamus? Aut, vel sunt, eos quidem distinctio mollitia molestiae quisquam nesciunt ea voluptate atque neque id harum cupiditate ab! Pariatur blanditiis quam recusandae excepturi quae? Perferendis, sequi. Ipsam dignissimos nesciunt delectus. Vel iusto neque, hic minima fuga cupiditate facilis debitis iste aliquam iure voluptatibus odio consequuntur molestiae quia possimus esse deleniti ut consectetur eveniet. Tenetur repudiandae, numquam molestias sequi ipsa consequuntur? Repellat quasi fugiat inventore, deserunt amet beatae, eveniet aliquam ipsum tempora quos sapiente? Sequi odit placeat temporibus. Doloremque quia quaerat, ea ex minus sit? Fugiat, explicabo aliquid! Quam, reiciendis veritatis. Provident veniam omnis quae magnam ipsa nisi id exercitationem, esse nihil nam veritatis quo ab ullam modi est sint. Porro, atque amet? Ipsam nihil aspernatur molestiae doloribus, repellendus totam eius.
+        </p>
+        <button class="read-more-button">Read More</button>
+    </div>
+</div>
+<div class="pagination">
+    <div class="pagination-item-wrapper">
+        <a class="pagination-anchor">
+            <div class="pagination-item"></div>
+            <span class="pagination-text">Description</span>
+        </a>
+    </div>
+</div>
+<div class="modal">
+    <div class="modal-close"></div>
+    <div class="modal-content">
+        <h1>Description</h1>
+        <p></p>
+        <p></p>
+        <h2>What is SynORI?</h2>
+        <p>SynORI stands for synthetic origin of replication. It is a framework designed to make working with single
+            and multi-plasmid systems precise, easy and on top of that - more functional.</p>
+        <p>The SynORI framework enables scientists to build a multi-plasmid system in a standardized manner by:</p>
+        <ol>
+            <li>Selecting the number of plasmid groups</li>
+            <li>Choosing the copy number of each group</li>
+            <li>Picking the type of copy number control (specific to one group or regulating all of them at once).</li>
+
+        </ol>
+        </p>
+
+        <p></p>
+        <p>The framework also includes a possibility of adding a selection system that reduces the usage of antibiotics
+            (only 1 antibiotic for up to 5 different plasmids!) and an active partitioning system to make sure that low
+            copy number plasmid groups are not lost during the division.
+        </p>
+        <p></p>
+        <div class="img-cont">
+            <img src="http://parts.igem.org/wiki/images/8/84/Collect.png" alt="img">
+            <div class="img-label">
+            </div>
+        </div>
+        <h2>Applications</h2>
+        <p>
+            <h5>Everyday lab work</h5>
+            <p>
+                A multi-plasmid system that is easy to assemble and control. With our framework the need to limit your
+                research to a particular plasmid copy number just because there are not enough right replicons to
+                choose from, is eliminated. With SynORI you can easily create a vector with a desired copy number that
+                suits your needs.</li>
+            </p>
+            <h5>Biological computing</h5>
+            <p>
+                The ability to choose a wide range of copy number options and their control types will make the
+                synthetic biology engineering much more flexible and predictable. Introduction of plasmid copy number
+                regulation is equivalent to adding a global parameter to a computer system. It enables the coordination
+                of multiple gene group expression.
+            </p>
+            <h5>Smart assembly of large protein complexes</h5>
+            <p>
+                The co-expression of multi-subunit complexes using different replicons brings incoherency to an already
+                chaotic cell system. This can be avoided by using SynORI, as in this framework every plasmid group uses
+                the same type of control, and in addition can act in a group-specific manner.</p>
+
+            <h5>Metabolic engineering</h5>
+            <p>
+                A big challenge for heterologous expression of multiple gene pathways is to accurately adjust the
+                levels of each enzyme to achieve optimal production efficiency. Precise promoter tuning in
+                transcriptional control and synthetic ribosome binding sites in translational control are already
+                widely used to maintain expression levels. In addition to current approaches, our framework allows a
+                simultaneous multiple gene control. Furthermore, an inducible regulation that we offer, can make the
+                search for perfect conditions a lot easier.
+
+
+
+            </p>
+
+
+        </p>
+        <p>
+        </p>
+        <h2 id="edinburgh_model">Edingburgh Model</h2>
+        <table style="width:100%">
+		<thead>
+			<td align='center'>Species sign in ODE system</td>
+			<td align='center'>Species</td>
+			<td align='center'>Initial concentration (M)</td>
+		</thead>
+		<tbody>
+			<tr>
+				<td align='center'>A</td>
+				<td align='center'>pDNA+RNA I+RNAII early</td>
+				<td align='center'>0</td>
+			</tr>
+			<tr>
+				<td align='center'>B</td>
+				<td align='center'>pDNA+RNA II short</td>
+				<td align='center'>0</td>
+			</tr>
+						<tr>
+				<td align='center'>RNAI</td>
+				<td align='center'>RNA I</td>
+				<td align='center'>1E-6</td>
+			</tr>
+						<tr>
+				<td align='center'>D</td>
+				<td align='center'>pDNA+RNA II long</td>
+				<td align='center'>0</td>
+			</tr>
+						<tr>
+				<td align='center'>E</td>
+				<td align='center'>pDNA+RNAII primer</td>
+				<td align='center'>0</td>
+			</tr>
+						<tr>
+				<td align='center'>F</td>
+				<td align='center'>RNA II long</td>
+				<td align='center'>0</td>
+			</tr>
+						<tr>
+				<td align='center'>G</td>
+				<td align='center'>pDNA</td>
+				<td align='center'>4E-8*</td>
+			</tr>
+						<tr>
+				<td align='center'>H</td>
+				<td align='center'>pDNA+RNA II+RNA I late</td>
+				<td align='center'>0</td>
+			</tr>
+						<tr>
+				<td align='center'>RNA II</td>
+				<td align='center'>RNA II</td>
+				<td align='center'>0</td>
+			</tr>
+			<tr>
+				<td align='center'>J</td>
+				<td align='center'>RNAI+RNAII</td>
+				<td align='center'>0</td>
+			</tr>
+		</tbody>
+	</table>
+    </div>
+</div>
+
+{% endblock %}

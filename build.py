@@ -102,7 +102,7 @@ except OSError:
     shutil.rmtree(build_path, ignore_errors=True)
     os.mkdir(build_path)
 
-shutil.rmtree(build_path, ignore_errors=True)
+# shutil.rmtree(build_path, ignore_errors=True)
 copy_files()
 build_sass()
 render_all(template_files)

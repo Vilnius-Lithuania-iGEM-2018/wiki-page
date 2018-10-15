@@ -1,6 +1,8 @@
 $black: #000;
 $white: #fff;
+
 .header-area {
+    font-family: "FuturaPTLight", "sans-serif";
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -10,20 +12,16 @@ $white: #fff;
     .hamburger-menu {
         display: none;
     }
-
     .navigation {
         display: flex;
         justify-content: center;
-        font-weight: 600;
-        // border: 1px solid red;
-        margin-top: 2.5%;
+        font-weight: 600; // border: 1px solid red;
+        margin-top:1%;
         align-items: center;
         width: 60%;
-
         .back {
             display: none;
         }
-
         .navigation-list {
             display: flex;
             width: 100%;
@@ -35,6 +33,7 @@ $white: #fff;
                 justify-content: center;
                 width: 35%;
                 height: 15vh;
+
                 .navigation-list-item-anchor {
                     display: flex;
                     flex-wrap: wrap;
@@ -66,7 +65,6 @@ $white: #fff;
                         background-color: $black;
                         box-shadow: 0px 0px 5px #000;
                         border-radius: 100%;
-
                         .image-logo {
                             filter: invert(100%);
                         }
@@ -77,61 +75,83 @@ $white: #fff;
     }
 }
 
-// Tablet view
-@media only screen and (max-width: 1024px) {
-    .nav {
-        width: 90%;
-        border: 1px solid black;
-    }
-    .nav__nav-logo-text {
-        font-size: .4em;
+@media (max-width: 1600px) {
+    .navigation {
+        margin-top:2% !important;
     }
 }
-@media only screen and (max-width: 850px) {
-    .header-area {
-    position: absolute;
+
+
+@media (max-width: 1000px) {
     .navigation {
-        display: none;
+        width:100% !important;
+        margin-top:2% !important;
     }
-        .navigation-list {
-            flex-direction: column;
+}
+
+@media (max-width: 550px) {
+    .header-area {
+        height: 100vh;
+    }
+    .navigation {
+        height: 100vh;
+        width: 89% !important;
+        margin-top: 0 !important;
+    }
+    .navigation-list {
+        height: 80%;
+        flex-wrap: wrap !important;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        #project-list-item {
+            order: 1;
+            flex: 0 1 100%;
+        }
+        #parts-list-item {
+            flex: 0 1 33%;
+            order: 3;
+        }
+        #notebook-list-item {
+            flex: 0 1 100%;
+            order: 5;
+        }
+        #hp-list-item {
+            flex: 0 1 33%;
+            order: 2;
+            .navigation-list-item-anchor {
+                align-content: flex-end !important;
+            }
+        }
+        #team-list-item {
+            flex: 0 1 33%;
+            order: 4;
+            .navigation-list-item-anchor {
+                align-content: flex-start !important;
+            }
         }
         .navigation-list-item {
-            display: block;
-        }
+            .navigation-list-item-anchor {
+                align-content: center !important;
+                font-family: "FuturaPTLight", "sans-serif";
+                .image-container {
+                    order:2;
+                    .image-logo {
+                        width: 3.88em !important;
+                    }
+                }
 
-        .hamburger-menu {
-            position: absolute;
-            top: 5vh; 
-            left: 5vw;
-        }
-
-        .sidebar {
-            position:absolute;
-            left:0;
-            top:0;
-            height: 100vh;
-            width:0vw;
-            background-color:white;
-            border-right:1px solid black;
-
-            .close-icon {
-                display: block;
-                width:50%;
+                .image-logo-text {
+                    font-size: 1.4em !important;
+                    white-space: normal !important;
+                }
             }
         }
-
-        .sidebar-expanded {
-
-            .header-area {
-                justify-content: center;
-                align-items: center;
-            }
-            .navigation {
-                display: block !important;
-            }
-            width:20vw;
-            transition: all .5s linear;
+        .navigation-list-item-anchor:first-child {
+            align-content: center;
         }
+    }
+    .main-content-container {
+        display: none;
     }
 }

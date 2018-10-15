@@ -37,8 +37,8 @@ $(document).ready(function () {
         setTimeout(function () { toggleSubMenu(child, false) }, 5000);
     })
 
-    $('.sub-menu-li').mouseover(function () {
-        var item = $(this).attr("name");
+    $('.sub-menu-li > a').mouseover(function () {
+        var item = $(this).parent().attr("name");
         $('.liposome-exposition').attr('src', '/files/images/Expositions/' + item + '.mp4');
         $('.liposome-video')[0].load();
         $('.liposome-video')[0].play();
@@ -50,7 +50,11 @@ $(document).ready(function () {
         if (inverted) {
             $("body").css("background-color", "#332f2f");
             $("nav").css("filter", "invert(100%)");
+            $(".text-wall-area-box").css("filter", "invert(100%)");
+            $(".pagination .pagination-text").css("filter", "invert(100%)");
             $("section").css("filter", "invert(100%)");
+            $("#back").css("filter", "invert(100%)");
+            $(".carrot-next-icon").css("filter", "invert(100%)");
             $(".invert-image").css("background-color", "#332f2f");
             $(".invert-image").css("filter", "invert(0%)");
             $(".invert-text").css("color", "#fff");
@@ -72,6 +76,10 @@ $(document).ready(function () {
             $("body").css("background-color", "#e7e7e8");
             $("nav").css("filter", "invert(0%)");
             $("section").css("filter", "invert(0%)");
+            $(".text-wall-area-box").css("filter", "invert(0%)");
+            $(".pagination .pagination-text").css("filter", "invert(0%)");
+            $("#back").css("filter", "invert(0%)");
+            $(".carrot-next-icon").css("filter", "invert(0%)");
             $(".invert-image").css("background-color", "#e7e7e8");
             $(".invert-image").css("filter", "invert(0%)");
             $(".invert-text").css("color", "#000");

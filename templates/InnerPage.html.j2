@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    {% block head %}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>iGEM Wiki Page - Project</title>
+        <link rel="stylesheet" type="text/css" href="files/css/Inner.css">
+        <script src="files/js/jquery-1.11.1.min.js" integrity="sha256-VAvG3sHdS5LqTT+5A/aeq/bZGa/Uj04xKxY8KM/w9EE=" crossorigin="anonymous"></script>
+    {% endblock %}
+ 
+    </head>
+    <body>
+    <div class="project-wrapper">
+        {% include 'partials/Nav.html.j2' %}
+                <div id="back">
+            <a href="index.html"><img class="back-icon" src="files/images/icons/navigation-icons/back.png"/></a>
+        </div>
+        <div class="content-area">
+        <div class="text-wall-carrot-container">
+            <div class="text-wall-area">
+                <div class="round-canals-background"></div>
+    {% block body %}
+    {% endblock %}
+            </div>
+            <div class="carrot-next">
+            <a class="carrot-anchor" href="">
+                <img class="carrot-next-icon" src="files/images/icons/navigation-icons/next.png"/>
+                </a>
+            </div>
+            </div>
+        </div>
+    </div>
+        {% include 'partials/InvertBox.html.j2' %}
+        <script src="../files/js/navAnimations.js"> </script>
+        <script src="../files/js/inner-page.js"></script>
+    </body>
+</html>

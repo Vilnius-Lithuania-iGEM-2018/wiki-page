@@ -1,6 +1,6 @@
 .invert-box {
-    bottom:3em;
-    right:3em;
+    bottom:0;
+    right:10%;
     position:absolute;
     display: flex;
     flex-direction: column;
@@ -10,8 +10,7 @@
     transition: transform .3s linear;
 
     img {
-        width: 2.88em;
-        height: 3em;
+        width: 3em;
     }
 
     .invert-text {

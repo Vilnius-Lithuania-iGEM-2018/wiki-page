@@ -6,6 +6,27 @@ $white: #fff;
     src: url("fonts/FuturaPTMedium.woff") format('woff');
 }
 
+@font-face {
+    font-family: 'FuturaPTBook';
+    src: url('../fonts/FuturaPTBook.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FuturaLightOblique';
+    src: url('../fonts/FuturaPTLightOblique.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FuturaPTLight';
+    src: url('../fonts/FuturaPTLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 *,
 *::after,
 *::before {
@@ -19,7 +40,10 @@ html {
 
     body {
         background-color: #e7e7e8;
-        font-family: "Futura", sans-serif;
+        font-family: "FuturaPTLight", "sans-serif";
+        position: relative;
+        overflow: hidden;
+        
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -44,14 +68,19 @@ html {
         width:80%;
     }
 
-    @media only screen and (max-width: 850px) {
-        .main-content-container {
-            width:100%;
-            margin-top:20vh;
+    @media (max-width: 856px) {
+        .image-logo-text {
+            font-size: .9em !important;   
+        }
 
-            .sub-menu {
-                order:2;
-            }
+        .sub-menu {
+            font-size: .9rem;
+        }
+    }
+
+    @media (max-width: 550px) {
+        .main-content-container {
+            display: none;
         }
     }
 }
