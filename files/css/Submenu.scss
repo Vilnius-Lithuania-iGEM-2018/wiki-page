@@ -1,5 +1,7 @@
 .sub-menu {
-    flex:1;
+    -webkit-box-flex:1;
+        -ms-flex:1;
+            flex:1;
     position: relative;
     font-size: 1.35rem;
     font-weight: 600;
@@ -11,7 +13,9 @@
         position:absolute;
         // transition: all 1s linear;
         visibility: hidden;
-        transform: translateY(30vh);
+        -webkit-transform: translateY(30vh);
+            -ms-transform: translateY(30vh);
+                transform: translateY(30vh);
         opacity:0;
 
         li {

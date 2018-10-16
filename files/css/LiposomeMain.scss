@@ -1,6 +1,8 @@
 .hexagon {
     // border: 1px solid yellow;
-    flex:3;
+    -webkit-box-flex:3;
+        -ms-flex:3;
+            flex:3;
     width: 50vw;
     height:70vh;
 

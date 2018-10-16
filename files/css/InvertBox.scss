@@ -2,12 +2,25 @@
     bottom:0;
     right:10%;
     position:absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-weight: 600;
+    -webkit-transition: -webkit-transform .3s linear;
+    transition: -webkit-transform .3s linear;
+    -o-transition: transform .3s linear;
     transition: transform .3s linear;
+    transition: transform .3s linear, -webkit-transform .3s linear;
 
     img {
         width: 3em;
@@ -19,7 +32,9 @@
 }
 
 .invert-box:hover {
-    transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+            transform: scale(1.3);
 }
 .invert-box__image {
     width:5em;

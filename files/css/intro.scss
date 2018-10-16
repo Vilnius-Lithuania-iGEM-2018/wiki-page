@@ -8,12 +8,15 @@ $white: #fff;
 *::before {
     margin:0;
     padding:0;
-    box-sizing: inherit;
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
 }
 
 html {
 
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+            box-sizing: border-box;
 
     body {
         background-color: #332F2F;
@@ -63,11 +66,18 @@ html {
 .container {
     width: 100vw;
     height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: relative;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     overflow: hidden;
 }
 
@@ -76,13 +86,22 @@ html {
     text-align: center;
 }
 .pulsing-logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-transition: all 1s ease-in;
+    -o-transition: all 1s ease-in;
     transition: all 1s ease-in;
 
     .pulsing-logo__project-text {
-        flex:100%;
+        -webkit-box-flex:100%;
+            -ms-flex:100%;
+                flex:100%;
         width: 100%;
         display:none;
         text-align: center;
@@ -92,6 +111,8 @@ html {
     .pulsing-logo__image {
         width: 15%;
         max-width: 100%; 
+        -webkit-transition: display 1s ease-in; 
+        -o-transition: display 1s ease-in; 
         transition: display 1s ease-in;
         }
 
@@ -99,6 +120,8 @@ html {
 
 .canals {
     position: absolute;
+    -webkit-transition: all 2s linear;
+    -o-transition: all 2s linear;
     transition: all 2s linear;
     top:0;
     left:0;
@@ -127,20 +150,35 @@ html {
 .buttons {
     position: absolute;
     opacity: 0;
+    -webkit-transition: opacity 2s linear;
+    -o-transition: opacity 2s linear;
     transition: opacity 2s linear;
     right: 10vw;
     top: 50vh;
     z-index: -3;
     .off-button {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        flex:1;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-flex:1;
+            -ms-flex:1;
+                flex:1;
     }
     .button-anchor {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex:1;
-        align-items: center;
+        -webkit-box-flex:1;
+            -ms-flex:1;
+                flex:1;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
 
         img {
             width: 40%;
@@ -157,7 +195,9 @@ html {
     left:0;
     top:-20vh;
     width:100vw;
-    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+        -ms-transform: scale(1.5);
+            transform: scale(1.5);
     z-index:10;
     img {
         width: 100%;
@@ -195,6 +235,8 @@ html {
 
     .buttons {
         position: absolute;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         opacity: 0;
         left: 0;
@@ -204,27 +246,47 @@ html {
         z-index: -3;
         .off-button {
             position: relative;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            flex:1;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            -webkit-box-flex:1;
+                -ms-flex:1;
+                    flex:1;
         }
         .button-anchor {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex:1;
-            flex-wrap: wrap;
+            -webkit-box-flex:1;
+                -ms-flex:1;
+                    flex:1;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
             text-align: center;
-            justify-content: center;
-            align-items: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
     
             img {
                 width: 56%;
-                flex:1;
+                -webkit-box-flex:1;
+                    -ms-flex:1;
+                        flex:1;
             }
         }   
         .button-text {
             width: 50%;
-            order: -1;
+            -webkit-box-ordinal-group: 0;
+                -ms-flex-order: -1;
+                    order: -1;
             color:white;
             font-size:1.1em;
         }

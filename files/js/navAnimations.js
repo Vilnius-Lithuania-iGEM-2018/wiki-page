@@ -27,7 +27,7 @@ var dict = [{
 var inverted = false;
 
 $(document).ready(function () {
-    $('.navigation-list-item-anchor').mouseover(function () {
+    $('.navigation-list-item-anchor').mousemove(function () {
         var childIndex = $(this.parentElement).index();
         toggleSubMenu(childIndex, true);
     })
@@ -126,7 +126,7 @@ function hideMenu(childIndex) {
 }
 
 function checkOtherHoveredIcons(index) {
-    dict.forEach(element => {
+    dict.forEach(function(element) {
         if (element.key != index) {
             if (element.hovered) {
                 hideMenu(element.key)

@@ -32,11 +32,13 @@ $white: #fff;
 *::before {
     margin:0;
     padding:0;
-    box-sizing: inherit;
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
 }
 
 html {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 
     body {
         background-color: #e7e7e8;
@@ -44,9 +46,16 @@ html {
         position: relative;
         overflow: hidden;
         
+        display: -webkit-box;
+        
+        display: -ms-flexbox;
+        
         display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
 
         a {
             text-decoration: none;
@@ -64,6 +73,8 @@ html {
     @import "Submenu";
 
     .main-content-container {
+        display:-webkit-box;
+        display:-ms-flexbox;
         display:flex;
         width:80%;
     }

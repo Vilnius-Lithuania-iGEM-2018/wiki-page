@@ -16,7 +16,7 @@ var buttonsStatus = [
 
 function checkForStatuses(myArray) {
     var counter = 0;
-    myArray.forEach(element => {
+    myArray.forEach(function(element) {
         if (element.status) {
             counter += 1;
         }
