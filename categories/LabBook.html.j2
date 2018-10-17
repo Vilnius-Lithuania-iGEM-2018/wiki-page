@@ -30,336 +30,346 @@
 <div class="modal">
     <div class="modal-close"></div>
     <div class="modal-content">
-        <h1>Sponsors</h1>
-        <h2>Protein level sponsors</h2>
-        <p>These are our general sponsors. They have provided us with reagents for our project
-            and a major financial support
-        </p>
-        <div class="sponsors-items">
+        <h1>Lab Book</h1>
 
-            <div class="sponsors-item">
-                <img class="img-cont sponsors-item-image img-expand" src="files/images/logos/brolissemiconductors.png" alt="img">
-                <div class="item-modal">
-                    <div class="close-item-modal"></div>
-                    <h1>Brolis Semiconductors
-                    </h1>
-                    <img class="item-modal-image" src="files/images/logos/brolissemiconductors-big.png" alt="img">
-                    <p class="item-modal-text">Brolis Semiconductors is a high-tech company engaged in
-                        semiconductors in electronics and photoelectronics. Three brothers - Augustinas, Kristijonas
-                        and Dominykas have launched the company in 2011. Since the foundation, Brolis Semiconductors
-                        has been growing dynamically, marked by numerous awards, continuous innovation and consistent
-                        growth in both personnel and infrastructure. Currently Brolis acts across three locations with
-                        headquarters and production facility in Vilnius (Lithuania), Northern Ireland and Ghent
-                        (Belgium).
+        <div id="accordion" class="ui-accordion ui-widget ui-helper-reset" role="tablist">
 
-                        Brolis Semiconductors focuses on creation some of the world’s finest infrared laser products
-                        from near infrared to mid infrared. The mission of Brolis Semiconductors is to create, develop
-                        and bring to market advanced cutting-edge infrared photonic technology that would fully utilize
-                        the very nature of semiconductors technology - compactness and scale - and reach every
-                        individual.
+            <h1 class="ui-accordion-header ui-corner-top ui-state-default ui-accordion-header-active ui-state-active ui-accordion-icons"
+                role="tab" id="ui-id-1" aria-controls="ui-id-2" aria-selected="true" aria-expanded="true" tabindex="0"><span
+                    class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-s"></span>Week 1</h1>
+            <div style="display: block; height: 214px;" class="ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content ui-accordion-content-active"
+                id="ui-id-2" aria-labelledby="ui-id-1" role="tabpanel" aria-hidden="false">
+                <h2>Competent cell stock preparation</h2>
+                <h3>Aim:</h3>
+                <p>To prepare chemically competent cell stocks of E. coli strains DH5α, DH10b, TG1 and BL21.</p>
+                <h3>Reagents used:</h3>
+                <p><b>Table 1.</b> List of reagents used in the experiment</p>
+                <table>
+                    <tr>
+                        <td><b>Name of reagent</b></td>
+                    </tr>
+                    <tr>
+                        <td>Glycerol</td>
+                    </tr>
+                    <tr>
+                        <td>LB medium</td>
+                    </tr>
+                    <tr>
+                        <td>SOB medium</td>
+                    </tr>
+                    <tr>
+                        <td>pBAD-MCS1 vector</td>
+                    </tr>
+                    <tr>
+                        <td>pBAD2-MCS1 vector</td>
+                    </tr>
+                    <tr>
+                        <td>Kanamycin</td>
+                    </tr>
+                    <tr>
+                        <td>Chloramphenicol</td>
+                    </tr>
+                </table>
 
-                    </p>
-                </div>
-            </div>
-            <div class="sponsors-item">
-                <img class="img-cont sponsors-item-image img-expand" src="files/images/logos/thermofisher.png" alt="img">
-                <div class="item-modal">
-                    <div class="close-item-modal"></div>
-                    <h1 class="item-modal-heading">Thermo Fisher Scientific</h1>
-                    <img class="item-modal-image" src="files/images/logos/thermofisher-big.png" alt="img">
-                    <p class="item-modal-text">Thermo Fisher Scientific is the world leader in serving science, with
-                        revenues of $17 billion
-                        and 50,000 employees in 50 countries. Company's mission is to enable the customers to make the
-                        world healthier, cleaner and safer. They help the customers accelerate life sciences research,
-                        solve complex analytical challenges, improve patient diagnostics and increase laboratory
-                        productivity.
+                <h2>Experiment description</h2>
+                <p>
+                    Most of the experiments require a transformation step, which cannot be executed without competent
+                    cells. For our future experiments we chose E.coli strains DH5α (for most regular experiments,
+                    storing plasmids), DH10b, TG1 (useful for quick transformations, because it grows faster than other
+                    strains) and BL21 (for experiments associated with protein expression). Cells were prepared using
+                    CaCl2 and glycerol solutions.
+                </p>
 
-                        Thermo Fisher Scientific Vilnius Center of Excellence for Biosciences has world-class
-                        capabilities in manufacturing products for the life science market, and has an outstanding
-                        research and development (R&D) center, focused on the development of new products in all
-                        aspects of molecular, protein, and cellular biology. Products are broadly used worldwide to
-                        study gene structure, expression and variety, to create new diagnostics methods for innate,
-                        hereditary and infectious diseases.
-                    </p>
-                </div>
-            </div>
-            <div class="sponsors-item">
-                <img class="img-cont sponsors-item-image img-expand" src="files/images/logos/barclays.png" alt="img">
-                <div class="item-modal">
-                    <div class="close-item-modal"></div>
-                    <h1 class="item-modal-heading">Barclays</h1>
-                    <img class="item-modal-image" src="files/images/logos/barclays-big.png" alt="img">
-                    <p class="item-modal-text">Barclays - a British multinational investment bank and financial
-                        services company headquartered in London has more than 325 years of history from the very
-                        beginning in Lombard Street. Apart from investment, Barclays is organised into four core
-                        businesses: personal banking, corporate banking, wealth management and investment management.
-                        The strategy of Barclays PLC Group is to build on their strength as a transatlantic consumer,
-                        corporate and investment bank.
+                <h2>Experiment protocol</h2>
+                <p>
+                    <ul>
+                        <li>
+                            Prepare 500ml 0.1M CaCl2, 100 ml 0.1 M CaCl2 + 15% glycerol solutions and 1.6 L LB medium.
+                            Autoclave them. Store in 4 °C (LB can be stored in a room temperature).
+                        </li>
+                        <li>
+                            Inoculate a single colony of each strain in 10 ml LB. Grow overnight in 30 °C or 37 °C.
+                        </li>
+                        <li>
+                            In the morning, transfer 4 ml of overnight culture into 400 ml LB (dilution 1:100).
+                        </li>
+                        <li>
+                            Grow new cultures in 37 °C for 2-4 h, until the OD600 reaches 0.3-0.5 (use clear LB as a
+                            blank). FROM NOW ON, EVERYTHING MUST BE KEPT COLD/ON ICE.
+                        </li>
+                        <li>
+                            Centrifuge cells in pre-cooled (to 4 °C) Eppendorf 5810 R centrifuge at 3000 rpm for 10
+                            min.
+                        </li>
+                        <li>
+                            Decant the medium, resuspend cells in 40 ml of 0.1 M CaCl2 (resuspension is usually done in
+                            10% of initial culture volume).
+                        </li>
+                        <li>
+                            Centrifuge as in 5.
+                        </li>
+                        <li>
+                            Decant and resuspend as in 6.
+                        </li>
+                        <li>
+                            Centrifuge as in 5.
+                        </li>
+                        <li>
+                            Decant and resuspend as in 6. Leave cells on ice for 3 h or more.
+                        </li>
+                        <li>
+                            Centrifuge as in 5.
+                        </li>
+                        <li>
+                            Decant and resuspend cells in 10 ml of 0.1 M CaCl2 + 15% glycerol solution.
+                        </li>
+                        <li>
+                            Aliquot competent cells 100 µl/tube.
+                        </li>
+                        <li>
+                            Store cells in -70°C.
+                        </li>
+                    </ul>
+                </p>
+                <p>
+                    <i>
+                        Note: for one transformation, 50 µl of cells is enough in this case. For 1 transformation per
+                        tube, in step 12 resuspend cells in 20 ml of solution.
+                    </i>
+                </p>
 
-                        In 2009 in Lithuania Barclays established strategic centre for technologies and services –
-                        Barclays Group Operations Centre in Lithuania (BGOL) with over 900 employees. Two clearly
-                        defined divisions of Barclays - Barclays UK and Barclays International, provide diversification
-                        by business line, geography and customer, enhancing financial resilience and helping to
-                        contribute to the delivery of consistent returns through the business cycle.
+                <h2>Results</h2>
+                <p>
+                    DH5α, TG1 and BL21 were transformed with pBAD-MCS1 and pBAD2-MCS1 vectors, negative controls were
+                    made with cells without any transformed DNA.
+                </p>
 
+                <div style="display:flex; flex-direction:column">
+                    <img src="files/images/labBook/Week1/figure1.jpg" style="width:400px" />
+                    <p>
+                        <b>Figure 1.</b> Transformed competent cells. Strain – vector pairs were chosen semi-randomly,
+                        only taking antibiotic resistances in account. 50 µl of competent cells were used for
+                        transformation, plates were grown in 37°C overnight.
                     </p>
                 </div>
-            </div>
-        </div>
-        <h2>RNA level sponsors</h2> 
-        <p>These sponsors helped us to cover project expenditures: laboratory costs, Giant
-            Jamboree participation fee, travel expenses and human practices' activities.</p>
-        <div class="sponsors-items">
 
-            <div class="sponsors-item">
-                <img class="img-cont sponsors-item-image img-expand" src="files/images/logos/biotecha.png" alt="img">
-                <div class="item-modal">
-                    <div class="close-item-modal"></div>
-                    <h1 class="item-modal-heading">Biotecha</h1>
-                    <img class="item-modal-image" src="files/images/logos/biotecha-big.png" alt="img">
-                    <p class="item-modal-text">Biotecha is a private limited liability company and one of the
-                            few companies in the Baltic countries with many years of experience in life sciences,
-                            pharmaceutical, food and beverage technologies. With many years of experience, UAB Biotecha
-                            now offers solutions and supplies devices for scientific analysis, manufacturing processes
-                            and process controls. The company delivers, installs and maintains industrial and
-                            laboratory equipment. Company’s mission is to deliver and offer the latest achievements in
-                            research and technology to the Baltic countries and provide all the necessary tools for
-                            scientific analysis, manufacturing processes and process controls.
+                <div style="display:flex; flex-direction:column">
+                    <img src="files/images/labBook/Week1/figure2.jpg" style="width:400px" />
+                    <p>
+                        <b>Figure 2.</b> Negative controls. Plates are perfectly empty. Antibiotic – strain pairs and
+                        growth conditions are same as in Figure 1.
+                    </p>
+                </div>
 
-                    </p>
-                </div>
+                <h2>Conclusions</h2>
+                <p>
+                    Viable E.coli DH5α, TG1 and BL21 chemically competent cells were prepared.
+                </p>
             </div>
-            <div class="sponsors-item">
-                <img class="img-cont sponsors-item-image img-expand" src="files/images/logos/metida.png" alt="img">
-                <div class="item-modal">
-                    <div class="close-item-modal"></div>
-                    <h1 class="item-modal-heading">Metida</h1>
-                    <img class="item-modal-image" src="files/images/logos/metida-big.png" alt="img">
-                    <p class="item-modal-text">METIDA is a patent and trademark agency, it was founded in 1991. In
-                        2005 it became METIDA Law Firm of Reda Zaboliene and expanded its’ areas of practice. The firm
-                        provides services in intellectual property, contract, company, competition, labour, real-estate
-                        and construction law, as well as represents legal and natural persons in civil cases.
-                    </p>
-                </div>
-            </div>
-            <div class="sponsors-item">
-                <img class="img-cont sponsors-item-image img-expand" src="files/images/logos/cosmobio.png" alt="img">
-                <div class="item-modal">
-                    <div class="close-item-modal"></div>
-                    <h1 class="item-modal-heading">Cosmo Bio</h1>
-                    <img class="item-modal-image" src="files/images/logos/cosmobio-big.png" alt="img">
-                    <p class="item-modal-text">Cosmo Bio is a Japanese company providing the most up-to-date
-                        products and technical information available from world-class manufacturers, to laboratories,
-                        research institutes, life-science education and testing organizations throughout Japan and
-                        around the world. Cosmo Bio has been supporting and inspiring the Japan life science research
-                        community for over 30 years with products from hundreds of domestic and international
-                        manufacturers.
-                    </p>
-                </div>
-            </div>
-            <div class="sponsors-item">
-                <img class="img-cont sponsors-item-image img-expand" src="files/images/logos/dropletgenomics.png" alt="img">
-                <div class="item-modal">
-                    <div class="close-item-modal"></div>
-                    <h1 class="item-modal-heading">Droplet Genomics</h1>
-                    <img class="item-modal-image" src="files/images/logos/dropletgenomics-big.png" alt="img">
-                    <p class="item-modal-text">Droplet Genomics is a company making microfluidic instruments,
-                        consumables and data analysis tools - so biological samples can be analysed at the granularity
-                        of single cells. This generates enough data to reveal biological mechanisms and makes it
-                        possible to predict the future, rather than characterise the present. Interdisciplinarity is at
-                        the heart of Droplet Genomics’ every product and the company consider this as a unique
-                        opportunity to deliver truly innovative solutions for a better science.
-                    </p>
-                </div>
-            </div>
-            <div class="sponsors-item">
-                <img class="img-cont sponsors-item-image img-expand" src="files/images/logos/zabolispartners.png" alt="img">
-                <div class="item-modal">
-                    <div class="close-item-modal"></div>
-                    <h1 class="item-modal-heading">Zabolis Partners</h1>
-                    <img class="item-modal-image" src="files/images/logos/zabolispartners-big.png" alt="img">
-                    <p class="item-modal-text">Zabolis Partners is a venture capital, venture debt, private equity,
-                        and real estate investment firm. It specializes in growth capital investments, bridge
-                        financing, distressed/vulture investments industry consolidations, recapitalizations, and
-                        buyouts. The firm seeks to invest in incubation, seed/startup, early venture, turnaround, and
-                        emerging growth stages. It seeks to make real estate investments in retail properties and large
-                        single-tenant and power centre properties. Zabolis Partners prefers to invest in the Baltic
-                        Region and Eastern Europe.
-                    </p>
-                </div>
-            </div>
-            <div class="sponsors-item">
-                <img class="img-cont sponsors-item-image img-expand" src="files/images/logos/lightconversion.png" alt="img">
-                <div class="item-modal">
-                    <div class="close-item-modal"></div>
-                    <h1 class="item-modal-heading">Light Conversion</h1>
-                    <img class="item-modal-image" src="files/images/logos/lightconversion-big.png" alt="img">
-                    <p class="item-modal-text">Light Conversion is a privately owned company based in Vilnius, the
-                        capital of Lithuania. Company is the world leading manufacturer of wavelength tunable
-                        femtosecond laser sources based on TOPAS and ORPHEUS series of optical parametric amplifiers
-                        (OPA) as well as diode pumped solid state femtosecond lasers PHAROS and CARBIDE. With more than
-                        3000 systems installed worldwide, Light Conversion has established itself as a reliable and
-                        innovative producer of femtosecond optical devices.
-                    </p>
-                </div>
-            </div>
-            <div class="sponsors-item">
-                <img class="img-cont sponsors-item-image img-expand" src="files/images/logos/bioklaboratorija.png" alt="img">
-                <div class="item-modal">
-                    <div class="close-item-modal"></div>
-                    <h1 class="item-modal-heading">BIOK laboratorija</h1>
-                    <img class="item-modal-image" src="files/images/logos/bioklaboratorija-big.png" alt="img">
-                    <p class="item-modal-text">BIOK laboratorija is the biggest cosmetics manufacturer in Lithuania
-                        founded in 1991. Company produces over 200 different skin, hair care and oral hygiene products.
-                        The underlying skincare manufacturing principle of BIOK Laboratorija is to take the best that
-                        nature can offer and use it for beauty. BIOK Laboratorija produces exceptionally natural and
-                        organic products enriched with plant-based ingredients that are reliable and effective. In
-                        addition to natural plant ingredients, the company uses active ingredients that help the skin
-                        regenerate, maintain its moisture balance and deliver the necessary vitamins.
 
-                    </p>
-                </div>
-            </div>
-            <div class="sponsors-item">
-                <img class="img-cont sponsors-item-image img-expand" src="files/images/logos/benediktasgylys.png" alt="img">
-                <div class="item-modal">
-                    <div class="close-item-modal"></div>
-                    <h1 class="item-modal-heading">Benediktas Gylys Foundation</h1>
-                    <img class="item-modal-image" src="files/images/logos/benediktasgylys-big.png" alt="img">
-                    <p class="item-modal-text">Since 2013 Benediktas Gylys Foundation (BGF) carries out projects
-                        that promote creativity, entrepreneurship and initiatives by young talents. From 2017 BGF
-                        purposefully supports science, innovation and technologies.
-                </div>
-            </div>
-        </div>
-        <h2>DNA level sponsors</h2> <p>These sponsors have provided us with some reagents and plastic ware for our project.</p>
-        </h2>
-        <div class="sponsors-items">
 
-            <div class="sponsors-item">
-                <img class="img-cont sponsors-item-image img-expand" src="files/images/logos/froceth.png" alt="img">
-                <div class="item-modal">
-                    <div class="close-item-modal"></div>
-                    <h1 class="item-modal-heading">Froceth</h1>
-                    <img class="item-modal-image" src="files/images/logos/froceth-big.png" alt="img">
-                    <p class="item-modal-text">Froceth is the first and only biotechnology company in Lithuania
-                        manufacturing advanced therapy medicinal products (ATMPs) individually for each patient.
-                        Products are developed by using patients’ own tissues and cells in the manufacturing process,
-                        and by addressing the specific needs of each person.
-                    </p>
-                </div>
-            </div>
-            <div class="sponsors-item">
-                <img class="img-cont sponsors-item-image img-expand" src="files/images/logos/integrateddnatechnologies.png" alt="img">
-                <div class="item-modal">
-                    <div class="close-item-modal"></div>
-                    <h1 class="item-modal-heading">Integrated DNA Technologies</h1>
-                    <img class="item-modal-image" src="files/images/logos/integrateddnatechnologies-big.png" alt="img">
-                    <p class="item-modal-text">IDT is the largest manufacturer of custom oligo products in the US
-                        today. They became the industry leader in this competitive field by maintaining the highest
-                        standards of quality, service, and technical know-how.
-                    </p>
-                </div>
-            </div>
-            <div class="sponsors-item">
-                <img class="img-cont sponsors-item-image img-expand" src="files/images/logos/grida.png" alt="img">
-                <div class="item-modal">
-                    <div class="close-item-modal"></div>
-                    <h1 class="item-modal-heading">Grida</h1>
-                    <img class="item-modal-image" src="files/images/logos/grida-big.png" alt="img">
-                    <p class="item-modal-text">Grida is a limited liability company trading in laboratory equipment
-                        and diagnostic reagents. Grida is one of the major suppliers on Lithuanian market of diagnostic
-                        testing systems, disposable systems and laboratory equipment to laboratories, university
-                        clinics, quality control laboratories and research institutes. Grida sells wide range of
-                        products from goods needed for daily work of a laboratory to complex equipment.
-                    </p>
-                </div>
-            </div>
-            <div class="sponsors-item">
-                <img class="img-cont sponsors-item-image img-expand" src="files/images/logos/labochema.png" alt="img">
-                <div class="item-modal">
-                    <div class="close-item-modal"></div>
-                    <h1 class="item-modal-heading">LaboChema</h1>
-                    <img class="item-modal-image" src="files/images/logos/labochema-big.png" alt="img">
-                    <p class="item-modal-text">Labochema is a limited liability company which can meet demand in
-                        different type of laboratory equipment, chemical reagents, laboratory wares and laboratory
-                        consumables, laboratory furniture, and implementing individual laboratory installation
-                        projects.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <h2>Academic sponsors</h2> <p>Our academic sponsors provided us laboratory space and some of the needed equipment,
-            covered the team registration fee. They consulted us on different project matters such as: project
-            development, communications and educational activities.</p>
-        </h2>
-        <div class="sponsors-items">
+            <h1 class="ui-accordion-header ui-corner-top ui-state-default ui-accordion-header-active ui-state-active ui-accordion-icons"
+                role="tab" id="ui-id-1" aria-controls="ui-id-2" aria-selected="true" aria-expanded="true" tabindex="0"><span
+                    class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-s"></span>Week 2</h1>
+            <div style="display: block; height: 214px;" class="ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content ui-accordion-content-active"
+                id="ui-id-2" aria-labelledby="ui-id-1" role="tabpanel" aria-hidden="false">
 
-            <div class="sponsors-item">
-                <img class="img-cont sponsors-item-image img-expand" src="files/images/logos/vilniausuniversitetas.png" alt="img">
-                <div class="item-modal">
-                    <div class="close-item-modal"></div>
-                    <h1 class="item-modal-heading">Vilnius University</h1>
-                    <img class="item-modal-image" src="files/images/logos/vilniausuniversitetas-big.png" alt="img">
-                    <p class="item-modal-text">Vilnius University is the oldest and largest Lithuanian higher
-                        education institution. It was established in the 16th century and now is one the most important
-                        parts of culture, science and research in Lithuania. The mission of Vilnius University is to
-                        create, accumulate and disseminate knowledge by ensuring continuity of authentic university
-                        culture, distinguished by the atmosphere where old traditions and new ideas enrich each other.
-                    </p>
-                </div>
-            </div>
-            <div class="sponsors-item">
-                <img class="img-cont sponsors-item-image img-expand" src="files/images/logos/gmc.png" alt="img">
-                <div class="item-modal">
-                    <div class="close-item-modal"></div>
-                    <h1 class="item-modal-heading">Vilnius University Life Sciences Center</h1>
-                    <img class="item-modal-image" src="files/images/logos/gmc-big.png" alt="img">
-                    <p class="item-modal-text">LSC project is one of the so-called Valley programs (research
-                        centers) implemented in Lithuania where one of the top priorities is to develop top level
-                        University education and attract young researchers to science. Main research fields and study
-                        programs at the LSC include structure and functional research of biomolecules, structural
-                        biology and bioinformatics, human, plant and microbial genome research, biotechnology,
-                        molecular biology, genetics, neurobiology, and related sciences. The LSC is focusing on
-                        cooperation with business and attracting foreign investments, creation of new innovative
-                        business.
-                    </p>
-                </div>
-            </div>
-            <div class="sponsors-item">
-                <img class="img-cont sponsors-item-image img-expand" src="files/images/logos/institutebiotechnology.png" alt="img">
-                <div class="item-modal">
-                    <div class="close-item-modal"></div>
-                    <h1 class="item-modal-heading">Institute of Biotechnology</h1>
-                    <img class="item-modal-image" src="files/images/logos/institutebiotechnology-big.png" alt="img">
-                    <p class="item-modal-text">Institute of Biotechnology is a part of Vilnius University, which
-                        focuses on scientific researches and biotechnology. Institute seeks to maintain the high
-                        standarts in scientific endeavour, research training and technological advance, with its main
-                        focus in a broadly defined field of molecular biotechnology, including nucleic acid and protein
-                        technologies, bioinformatics, immunodiagnostics, drug design, microfluidics, next generation
-                        epigenomics and gene editing technologies.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <h2>Friends</h2> <p>Provided accommodation in Boston during the “2018 Giant Jamboree” conference.</p>
-        <div class="sponsors-items">
+                <h2>Lysate control reaction</h2>
+                <h3>Aim:</h3>
+                <p>To check if lysates are active and usable in the project after the transportation.</p>
+                <h3>Reagents used:</h3>
+                <p><b>Table 1.</b> List of reagents used in the experiment</p>
+                <table>
+                    <tr>
+                        <td><b>Name of reagent</b></td>
+                    </tr>
+                    <tr>
+                        <td>E.coli Lysate</td>
+                    </tr>
+                    <tr>
+                        <td>Reaction Mix</td>
+                    </tr>
+                    <tr>
+                        <td>Amino Acids (without Methionine)</td>
+                    </tr>
+                    <tr>
+                        <td>Methionine</td>
+                    </tr>
+                    <tr>
+                        <td>Reconstitution Buffer</td>
+                    </tr>
+                    <tr>
+                        <td>Control Vector GFP</td>
+                    </tr>
+                    <tr>
+                        <td>DNase- and RNase-free water</td>
+                    </tr>
+                    <tr>
+                        <td>SpectraTM Multicolor Broad Range Protein Ladder (ThermoFisher scientific)</td>
+                    </tr>
+                    <tr>
+                        <td>PageRulerTM Unstained Protein Ladder (ThermoFisher scientific)</td>
+                    </tr>
+                </table>
 
-            <div class="sponsors-item">
-                <img class="img-cont sponsors-item-image img-expand" src="files/images/logos/lithuaniaamericacomunity.png" alt="img">
-                <div class="item-modal">
-                    <div class="close-item-modal"></div>
-                    <h1 class="item-modal-heading">Lithuania-American Community</h1>
-                    <img class="item-modal-image" src="files/images/logos/lithuaniaamericacomunity-big.png" alt="img">
-                    <p class="item-modal-text">The Lithuanian American Community (LAC) is part of the Lithuanian
-                        World Community, an organizational network embracing Lithuanians in over 41 countries. Since
-                        1951 they organize educational, cultural, community, sports and social events and, in addition,
-                        assists lithuanians or lithuanian organizations in foreign countries.
-                    </p>
+                <h2>Experiment description</h2>
+                <p>
+                    SDS-PAGE was run to detect GFP production.
+                </p>
+
+                <h2>Experiment protocol</h2>
+                <p>
+                    GFP synthesis and detection
+                    <ul>
+                        <li>RTSTM 100 E.coli HY Kit Manual was used
+                            <ul>
+                                <li>
+                                    Hydrate the reagents (according to Table 2, page 16), store in -20°C after the
+                                    hydration. Use the reconstruction buffer for hydrations, except for the GFP vector.
+                                    Use water for the GFP vector.
+                                </li>
+                                <li>
+                                    Mix reagents and place in 30°C for 6 h according to the <b>table 1.</b>
+                                </li>
+                                <li>
+                                    Store tubes in 2-8°C for 24 h. (this step is optional and needed to be done, if the
+                                    fluorescence is going to be measured)
+                                </li>
+                                <li>
+                                    Mix 10 µL of reaction product and 10 µL of denaturation dye and heat for 10 min in
+                                    100°C
+                                </li>
+                            </ul>
+
+                        </li>
+                        <li>
+                            Electrophoresis gel preparation:
+                            <ul>
+                                <li>
+                                    Wipe glass with 96% ethanol, place rubber around the rim of rounded-corner glass,
+                                    put intermediates in sides (do not stuck them under rubber), place second glass on
+                                    top tightly and secure with 6 clips to prevent leaking.
+                                </li>
+                                <li>
+                                    Prepare 15% acrylamide solution according to ThermoFisher scientific and pour
+                                    between glasses. Leave 2 cm for the concentration gel and pour 1-2 mL of
+                                    isopropanol on top. Leave for 30 min.
+                                </li>
+                                <li>
+                                    Pour isopropanol away and wash with water 3 times. Pour 4% acrylamide solution on
+                                    top and submerge gel comb slowly. Leave for polymerization
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Protein electrophoresis:
+                            <ul>
+                                <li>
+                                    Take of the clips and remove the rubber.
+                                </li>
+                                <li>
+                                    Stabilize the glass (higher glass facing you) in electrophoresis apparatus with
+                                    clips and pinch glass sheet for the other side of apparatus if one gel is done at
+                                    the time.
+                                </li>
+                                <li>
+                                    Fill the top and bottom chambers with buffer to submerge gel. Remove bubbles from
+                                    between the glass with needle.
+                                </li>
+                                <li>
+                                    Take out the gel comb and transfer the samples into wells.
+                                </li>
+                                <li>
+                                    Run for 1-2h 200V, 43 mA, 9W.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Take of the glass, submerge gel in Coomassie blue dye and leave it shaking for 30 min
+                        </li>
+                        <li>
+                            Pour of the dye and wash gel with water.
+                        </li>
+                        <li>
+                            Submerge in 5% acetic acid solution overnight while shaking.
+                        </li>
+                    </ul>
+                </p>
+
+                <p><b>Table 2.</b>GFP production using lysate</p>
+                <p>
+                    <table>
+                        <tr>
+                            <td><b>Reagent</b></td>
+                            <td><b>Amount</b></td>
+                        </tr>
+                        <tr>
+                            <td>E.coli lysate</td>
+                            <td>6 µL</td>
+                        </tr>
+                        <tr>
+                            <td>Reaction Mix</td>
+                            <td>5 µL</td>
+                        </tr>
+                        <tr>
+                            <td>Amino Acids</td>
+                            <td>6 µL</td>
+                        </tr>
+                        <tr>
+                            <td>Methionine</td>
+                            <td>0.5 µL</td>
+                        </tr>
+                        <tr>
+                            <td>Reconstitution Buffer</td>
+                            <td>2.5 µL</td>
+                        </tr>
+                        <tr>
+                            <td>DNA in water or TE buffer</td>
+                            <td>0.5 µL (1 µg/1 µL)</td>
+                        </tr>
+                        <tr>
+                            <td>DNase- and RNase-free water</td>
+                            <td>4.5 µL</td>
+                        </tr>
+                        <tr>
+                            <td><b>Total volume</b></td>
+                            <td><b>25 µL</b></td>
+                        </tr>
+                    </table>
+                </p>
+                <p><i>GFP fluorescence was checked under UV lamp. Reaction mixtures showed fluorescents and SDS-PAGE
+                        was done to analyse the results. </i></p>
+
+                <h2>Results</h2>
+                <div style="display:flex; flex-direction:column">
+                    <img src="files/images/labBook/Week2/figure1.png" style="width:600px" />
+                    <p><b>Figure 1.</b> SDS-PAGE gel. G, B1 and B2 stands for different sets of lysates. G- lysate that
+                        came with dry ice, B1 and B2- lysates that came without dry ice. </p>
                 </div>
+
+                <h2>Conclusions</h2>
+                <p>
+                    <ul>
+                        <li>All lysates are active and produced GFP </li>
+                        <li>Poor transportation conditions did not affect lysates. </li>
+                    </ul>
+                </p>
             </div>
+
+
+
+            
+
+
         </div>
     </div>
-</div>
+    <script>
+        $(function () {
+            $("#accordion").accordion({
+                active: false,
+                collapsible: true,
+            });
+        });
+    </script>
 
-{% endblock %}
+    {% endblock %}
